@@ -1,0 +1,127 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffb6c1;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.instruction {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: absolute;
+  top: -30px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: relative;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  left: -10px;
+}
+
+.heart:after {
+  top: -10px;
+}
+
+.heart.open {
+  opacity: 0;
+  transform: rotate(45deg) translateY(20px) scale(0.8);
+}
+
+.message {
+  background: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.message.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.message p {
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  font-family: "Lora", serif;
+}
+
+.messageHeart {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  position: relative;
+  transform: rotate(45deg);
+  margin: 20px auto 0;
+}
+
+.messageHeart:before,
+.messageHeart:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.messageHeart:before {
+  left: -6px;
+}
+
+.messageHeart:after {
+  top: -6px;
+}
+

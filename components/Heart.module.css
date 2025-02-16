@@ -1,0 +1,28 @@
+.heart {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.leftSide,
+.rightSide {
+  width: 50px;
+  height: 80px;
+  background-color: #ff0000;
+  position: absolute;
+  top: 0;
+}
+
+.leftSide {
+  left: 50px;
+  transform: rotate(-45deg);
+  border-radius: 50px 50px 0 0;
+}
+
+.rightSide {
+  right: 50px;
+  transform: rotate(45deg);
+  border-radius: 50px 50px 0 0;
+}
+
