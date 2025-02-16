@@ -9,9 +9,9 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'App Eli',
+  description: 'Creado para eli',
+  generator: 'Si',
 }
 
 export default function RootLayout({
